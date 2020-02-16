@@ -52,8 +52,9 @@ func (b *BOS) Upload(tmpFile, saveFile string, headers ...map[string]string) (er
 				args.ContentDisposition = v
 			case "content-type":
 				args.ContentType = v
-			case "content-encoding":
-				args.ContentEncoding = v
+			//obsolete usage
+			//case "content-encoding":
+			//	args.ContentEncoding = v
 			default:
 				args.UserMeta[k] = v
 			}
