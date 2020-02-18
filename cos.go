@@ -96,8 +96,6 @@ func (c *COS) Delete(objects ...string) (err error) {
 }
 
 func (c *COS) GetSignURL(object string, expire int64) (link string, err error) {
-        link = ""
-        return
 	if expire <= 0 {
 		link = c.Domain + objectAbs(object)
 		return
