@@ -33,9 +33,11 @@ func NewCOS(accessKey, secretKey, bucket, appId, region, domain string) (c *COS,
 		Region:    region,
 	}
 	u, _ := url.Parse(fmt.Sprintf("https://%v-%v.cos.%v.myqcloud.com", bucket, appId, region))
-	if domain == "" {
-		domain = u.String()
-	}
+//	if domain == "" {
+//		domain = u.String()
+//	}
+	domain = u.String()
+
 	c.Domain = strings.TrimRight(domain, "/ ")
 	c.Client = cos.NewClient(
 		&cos.BaseURL{BucketURL: u},
