@@ -9,7 +9,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/TruthHun/CloudStore/obs"
+	"github.com/hawkwang/CloudStore/obs"
 )
 
 type OBS struct {
